@@ -2,26 +2,26 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
-# browser = webdriver.Chrome('C:/Users/Aluno-ETEC/Desktop/PythonKali/chromedriver.exe')
-browser = webdriver.Chrome('C:/Users/israe/Desktop/PythonKali/chromedriver.exe')
-# browser.get('https://www.todamateria.com.br/matematica/')
-browser.get('https://www.todamateria.com.br/polimeros/')
 
-# sleep(1)
-# downloads = browser.find_element(By.XPATH, '//input[@id="search-text"]')
-# downloads.clear()
-# downloads.send_keys('polimeros')
-# sleep(1)
-# buttonPesquisa = browser.find_element(By.XPATH, '//button[@id="search-button"]')
-# buttonPesquisa.click()
+browser = webdriver.Chrome(executable_path=r'C:\chromedriver.exe')
+browser.get('https://www.todamateria.com.br/matematica/')
+
+sleep(1)
+# //[@id="search-text"]
+downloads = browser.find_element(By.XPATH, '//input[@id="search-text"]')
+downloads.clear()
+downloads.send_keys('polimeros')
+sleep(1)
+buttonPesquisa = browser.find_element(By.XPATH, '//button[@id="search-button"]')
+buttonPesquisa.click()
 
 # clica no conteudo
-# clickConteudo = browser.find_element(By.XPATH, '//a[@href="/polimeros/"]')
-# clickConteudo.click()
+clickConteudo = browser.find_element(By.XPATH, '//a[@href="/polimeros/"]')
+clickConteudo.click()
 
 # <input id="sg-feedback-radio--100" type="radio" name="checkRating" value="100">
-# buttonSim = browser.find_element(By.XPATH, '//input[@id="sg-feedback-radio--100"]')
-# buttonSim.click()
+buttonSim = browser.find_element(By.XPATH, '//input[@id="sg-feedback-radio--100"]')
+buttonSim.click()
 
 # <textarea id="feedback-improvement-comments" class="sg-feedback__comments" placeholder="Escreva aqui"></textarea>
 # textArea = browser.find_element(By.XPATH, '//textarea[@id="feedback-improvement-comments"]')
