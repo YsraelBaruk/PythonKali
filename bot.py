@@ -2,18 +2,43 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
-browser = webdriver.Firefox()
-browser.get('https://www.todamateria.com.br/')
+browser = webdriver.Chrome('C:/Users/Aluno-ETEC/Desktop/PythonKali/chromedriver.exe')
+# browser.get('https://www.todamateria.com.br/matematica/')
+browser.get('https://www.todamateria.com.br/polimeros/')
 
-# driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.CONTROL + 'w')
-sleep(2)
+# sleep(1)
+# downloads = browser.find_element(By.XPATH, '//input[@id="search-text"]')
+# downloads.clear()
+# downloads.send_keys('polimeros')
+# sleep(1)
+# buttonPesquisa = browser.find_element(By.XPATH, '//button[@id="search-button"]')
+# buttonPesquisa.click()
 
-downloads = browser.find_element(By.XPATH, '//input[@id="search-text"]')
-downloads.clear()
-downloads.send_keys('polimeros')
-sleep(5)
-# <div id="close" class="TvD9Pc-Bz112c ZYIfFd-aGxpHf-FnSee" role="button" aria-label="Fechar" tabindex="0"><div class="Bz112c-ZmdkE"></div><svg class="Bz112c Bz112c-r9oPif" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#5f6368"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg></div>
-buttonPesquisa = browser.find_element(By.XPATH, '//button[@id="search-button"]')
-buttonPesquisa.click()
-browser.quit()
-# https://youtu.be/Ot10qzrb13c
+# clica no conteudo
+# clickConteudo = browser.find_element(By.XPATH, '//a[@href="/polimeros/"]')
+# clickConteudo.click()
+
+# <input id="sg-feedback-radio--100" type="radio" name="checkRating" value="100">
+# buttonSim = browser.find_element(By.XPATH, '//input[@id="sg-feedback-radio--100"]')
+# buttonSim.click()
+
+# <textarea id="feedback-improvement-comments" class="sg-feedback__comments" placeholder="Escreva aqui"></textarea>
+# textArea = browser.find_element(By.XPATH, '//textarea[@id="feedback-improvement-comments"]')
+# textArea.clear()
+# textArea.send_keys('Conteúdo ótimo')
+# sleep(1)
+
+# <button id="feedback-improvement-submit" class="sg-feedback__improvement-submit" disabled="">Enviar</button>
+# buttonEnvia = browser.find_element(By.XPATH, '//button[@id="feedback-improvement-submit"]')
+# buttonEnvia.click()
+
+# <button class="sg-print-btn sg-icon-only" title="Imprimir"><span class="icon-sg-social icon-sg-social-print"></span></button>
+# buttonPrint = browser.find_element(By.XPATH, '//button[@class="sg-print-btn sg-icon-only"]')
+# buttonPrint.click()
+
+# if(time):
+#     browser.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+for _ in range(8):
+    browser.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+# enter
+# mouseInfo documento
